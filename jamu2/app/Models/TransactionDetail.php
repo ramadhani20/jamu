@@ -13,7 +13,6 @@ class TransactionDetail extends Model
     protected $fillable = [
        'transactions_id',
         'products_id',
-        ' users_id',
     ];
 
     protected $hidden = [
@@ -29,6 +28,7 @@ class TransactionDetail extends Model
     {
          return $this->belongsTo(Product::class,'products_id','id');
     }
+   
     
     
     

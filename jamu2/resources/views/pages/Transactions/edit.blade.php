@@ -3,9 +3,8 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <strong>Ubah Transaksi</strong>
-            <small>{{ $item->uuid }}</small>
-
+            <strong>Data Transaksi</strong>
+         
         </div>   
         <div class="card-body card-block">
             <form action="{{ route('transactions.update', $item->id)}}" method="POST">
@@ -31,22 +30,22 @@
         <div class="form-group">
             <label for="price" class="form-control-label"> No HP</label>
             <input type="text"
-                name="number"
-                value= "{{ old('number') ? old('number') : $item->number }}"
-                class="form-control @error('number') is-invalid @enderror"/>
-                @error('number')<div class ="text-muted">{{ $message }}</div>   @enderror 
+                name="telepon"
+                value= "{{ old('telepon') ? old('telepon') : $item->telepon }}"
+                class="form-control @error('telepon') is-invalid @enderror"/>
+                @error('telepon')<div class ="text-muted">{{ $message }}</div>   @enderror 
         </div>
         <div class="form-group">
-            <label for="address" class="form-control-label"> Alamat Pemesanan</label>
+            <label for="alamat" class="form-control-label"> Alamat Pemesanan</label>
             <input type="text"
-                name="address"
-                value= "{{ old('address') ? old('address') : $item->address }}"
-                class="form-control @error('address') is-invalid @enderror"/>
-                @error('address')<div class ="text-muted">{{ $message }}</div>   @enderror 
+                name="alamat"
+                value= "{{ old('alamat') ? old('alamat') : $item->alamat }}"
+                class="form-control @error('alamat') is-invalid @enderror"/>
+                @error('alamat')<div class ="text-muted">{{ $message }}</div>   @enderror 
         </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
-                Ubah Transaksi
+                Kembali
             </button>
         </div>
             </form>

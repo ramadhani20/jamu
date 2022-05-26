@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -24,5 +23,11 @@ class Transaction extends Model
     {
         return $this->hasMany(TransactionDetail::class,'transactions_id');
     }
+    public function users()
+    {
+        return $this->hasMany(User::class,'id');
+    }
+    
+    
    
 }

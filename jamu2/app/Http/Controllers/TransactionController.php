@@ -25,11 +25,10 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $items = Transaction::all();
-        $users = User::all();
+        $items = User::all();
         return view('pages.transactions.index')->with([
             'items' => $items,
-            'users' => $users     
+      
         ]);
     }
 
@@ -77,7 +76,8 @@ class TransactionController extends Controller
      */
     public function edit($id)
     {
-        $item = Transaction::findOrFail($id);
+        $item = User::findOrFail($id);
+        
 
         return view('pages.transactions.edit')->with([
             'item' => $item,

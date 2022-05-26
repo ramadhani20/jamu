@@ -1,20 +1,22 @@
 <table class="table tablebordered">
+    @foreach ($item->users as $user)
     <tr>
         <th>Nama</th>
-        <td>{{ $item->name }}</td>
+        <td>{{ $user->name }}</td>
     </tr>
     <tr>
         <th>Email</th>
-        <td>{{ $item->email }}</td>
+        <td>{{ $user->email }}</td>
     </tr>
     <tr>
         <th>Nomor</th>
-        <td>{{ $item->number }}</td>
+        <td>{{ $user->telepon }}</td>
     </tr>
     <tr>
         <th>Alamat</th>
-        <td>{{ $item->address }}</td>
+        <td>{{ $user->alamat }}</td>
     </tr>
+    @endforeach
     <tr>
         <th>Total Transaksi</th>
         <td>{{ $item->transaction_total }}</td>
